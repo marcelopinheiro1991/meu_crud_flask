@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Editar Tarefa{% endblock %}
+
+{% block content %}
+
+<h1>Editar Tarefa</h1>
+
+<form method="POST">
+
+    <label>Título:</label>
+    <input type="text" name="titulo" value="{{ tarefa.titulo }}" required>
+
+    <label>Descrição:</label>
+    <textarea name="descricao" required>{{ tarefa.descricao }}</textarea>
+
+    <label>Data de Vencimento:</label>
+    <input type="date" name="data_vencimento" value="{{ tarefa.data_vencimento }}" required>
+
+    <label>Prioridade:</label>
+    <select name="prioridade" required>
+        <option value="baixa" {% if tarefa.prioridade=='baixa' %}selected{% endif %}>Baixa</option>
+        <option value="media" {% if tarefa.prioridade=='media' %}selected{% endif %}>Média</option>
+        <option value="alta" {% if tarefa.prioridade=='alta' %}selected{% endif %}>Alta</option>
+    </select>
+
+    <label>Status:</label>
+    <select name="status">
+        <option value="pendente" {% if tarefa.status=='pendente' %}selected{% endif %}>Pendente</option>
+        <option value="em andamento" {% if tarefa.status=='em andamento' %}selected{% endif %}>Em andamento</option>
+        <option value="concluida" {% if tarefa.status=='concluida' %}selected{% endif %}>Concluída</option>
+    </select>
+
+    <button type="submit" class="btn">Salvar Alterações</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+
+body {
+    background-color: #eee6c3; /* cinza claro */
+}
+
+/* TAGS COLORIDAS */
+.tag {
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+/* PRIORIDADES */
+.prioridade.baixa {
+    background-color: #2ecc71; /* verde */
+}
+
+.prioridade.media {
+    background-color: #f1c40f; /* amarelo */
+}
+
+.prioridade.alta {
+    background-color: #e74c3c; /* vermelho */
+}
+
+/* STATUS */
+.status.pendente {
+    background-color: #3498db; /* azul */
+}
+
+.status.andamento,
+.status.em-andamento {
+    background-color: #9b59b6; /* roxo */
+}
+
+.status.concluida {
+    background-color: #2ecc71; /* verde */
+}

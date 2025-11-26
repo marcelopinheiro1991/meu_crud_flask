@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Criar Tarefa{% endblock %}
+
+{% block content %}
+
+<h1>Criar Nova Tarefa</h1>
+
+<form method="POST">
+
+    <label>Título:</label>
+    <input type="text" name="titulo" required>
+
+    <label>Descrição:</label>
+    <textarea name="descricao" required></textarea>
+
+    <label>Data de Vencimento:</label>
+    <input type="date" name="data_vencimento" required>
+
+    <label>Prioridade:</label>
+    <select name="prioridade" required>
+        <option value="baixa">Baixa</option>
+        <option value="media">Média</option>
+        <option value="alta">Alta</option>
+    </select>
+
+    <button type="submit" class="btn">Salvar</button>
+</form>
+
+{% endblock %}
